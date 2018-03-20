@@ -3,7 +3,7 @@ MAINTAINER David Personette <dperson@gmail.com>
 
 # Install openvpn
 RUN apk --no-cache --no-progress upgrade && \
-    apk --no-cache --no-progress add bash curl ip6tables iptables openvpn \
+    apk --no-cache --no-progress add bash curl ip6tables iptables openvpn python3 python3-dev git linux-headers postgresql postgresql-dev libc-dev musl-dev \
                 shadow && \
     addgroup -S vpn && \
     rm -rf /tmp/*
