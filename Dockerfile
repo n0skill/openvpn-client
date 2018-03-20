@@ -8,6 +8,8 @@ RUN apk --no-cache --no-progress upgrade && \
     addgroup -S vpn && \
     rm -rf /tmp/*
 
+RUN apk --no-cache --no-progress add chromimum chromium-chromedriver 
+
 COPY openvpn.sh /usr/bin/
 
 HEALTHCHECK --interval=60s --timeout=15s --start-period=120s \
